@@ -1,29 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music App</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="app-container">
-        <h1>Music App</h1>
-        
-        <!-- Search Input -->
-        <input type="text" id="search-bar" placeholder="Search for music...">
-        <button id="search-button">Search</button>
-        
-        <!-- Music Results -->
-        <div id="music-results"></div>
-        
-        <!-- Music Player (YouTube embedded) -->
-        <div id="player-container">
-            <iframe id="youtube-player" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <script src="app.js"></script>
+  <div class="container">
+    <header>
+      <h1>Music App</h1>
+      <input type="text" id="searchBar" placeholder="Search for songs, artists...">
+      <button onclick="searchSongs()">Search</button>
+    </header>
+    <div id="results" class="results"></div>
+  </div>
+  <script src="app.js"></script>
 </body>
 </html>
