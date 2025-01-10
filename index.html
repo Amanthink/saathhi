@@ -3,17 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>APNE GAANE</title>
+  <title>Music App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <header>
       <h1>Music App</h1>
-      <input type="text" id="searchBar" placeholder="Search for songs, artists...">
-      <button onclick="lets_search()">Search</button>
+      <input type="text" id="searchBar" placeholder="Search for songs, artists..." oninput="searchSongs()">
+      <button onclick="searchSongs()">Search</button>
+      <button onclick="showPlaylist()">Show Playlist</button>
     </header>
+
+    <!-- Loading Indicator -->
+    <div id="loading" class="loading">Loading...</div>
+
     <div id="results" class="results"></div>
+
+    <!-- Playlist Section -->
+    <div id="playlist" class="playlist">
+      <h2>Your Playlist</h2>
+      <div id="playlistItems"></div>
+    </div>
   </div>
   <script src="app.js"></script>
 </body>
